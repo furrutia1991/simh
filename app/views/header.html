@@ -1,0 +1,20 @@
+<header class="row">
+		<figure class="logo col-lg-1 col-xs-2" >
+			<img class="pull-right" src="" alt="logo">
+		</figure>
+		<div class="col-lg-1 col-xs-2">
+			<i class="el-icon-bell"></i>
+			{% if notificacion %}
+				<i class="el-icon-asterisk"></i>	
+			{% endif %}
+			
+		</div>
+		
+		<div class="profile col-lg-10 col-xs-7 ">
+			<div class="photo pull-right">
+				<img src="{{user.photo}}" class="round" alt="avatar">
+				<label class="username">{{user.name}}</label>
+			</div>
+			
+		</div>
+</header>

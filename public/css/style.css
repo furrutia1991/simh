@@ -1,0 +1,107 @@
+
+header
+{
+   background: #00BCD4;
+   padding: 2em 0;
+}
+#facebook
+{
+   margin-bottom: 1em;
+}
+.borde
+{
+   border: 2px solid red;
+}
+.categories
+{
+   
+}
+.default-margin
+{
+   margin-bottom: 2em;
+}
+.el-icon-bell
+{
+   font-size: 2em;
+   color:white;
+}
+
+.el-icon-asterisk
+{
+   color: red;
+   position: absolute;
+   top: -9px;
+   right: 62px;
+}
+
+.content
+{
+   padding-top: 5em;
+}
+.description
+{
+   font-size: 1.5em;
+}
+
+.first-row
+{
+   margin-bottom: 3em;
+}
+
+.full-center {
+   width: 600px;
+   height: 600px;
+   position: absolute;
+   overflow: hidden;
+   left: 50%;
+   top: 70%; 
+   margin-left: -300px;
+   margin-top: -300px;
+}
+
+.jumbotron
+{
+	overflow: hidden;
+}
+
+.logout
+{
+   background: #EFFB41;
+   font-size: 1.5em;
+   margin-right: .5em;
+   padding: 0.5em 1em;
+}
+
+.photo
+{
+   display: inline-block;
+}
+
+.round
+{
+   border-radius: 50%;
+}
+.username
+{
+   color: white;
+}
+@media screen and (max-width: 480px)
+{
+
+   .logout
+   {
+      font-size: 1em;
+      padding:  .5em 1em;
+   }
+   
+   .xs-center
+   {
+      text-align: center;
+   }
+
+}
+
+@media screen and (min-width: 1024px)
+{
+
+}
