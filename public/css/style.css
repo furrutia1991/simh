@@ -1,6 +1,6 @@
 body
 {
-   background: #fafafa;
+   
 }
 
 header
@@ -18,30 +18,28 @@ header
 }
 .categories
 {
-   margin: 1em;
-   border: 1px solid #ddd;   
 }
-.categories:hover
-{
-   cursor: pointer;
-   background: white; 
-}
+
 .default-margin
 {
    margin-bottom: 2em;
 }
-.el-icon-bell
+.el-bell
 {
    font-size: 2em;
    color:white;
 }
 
-.el-icon-asterisk
+.el-asterisk
 {
    color: red;
    position: absolute;
    top: -9px;
    right: 62px;
+}
+.el-caret-down
+{
+   font-size: 10px;
 }
 
 .content
@@ -77,14 +75,16 @@ header
 .logout
 {
    background: #EFFB41;
-   font-size: 1.5em;
-   margin-right: .5em;
+   font-size: 1em;
    padding: 0.5em 1em;
+   width: 100%;
 }
 
 .photo
 {
    display: inline-block;
+   position: relative;
+   
 }
 
 .round
@@ -93,8 +93,9 @@ header
 }
 .username
 {
-   color: white;
+   color:white;
 }
+
 @media screen and (max-width: 480px)
 {
 

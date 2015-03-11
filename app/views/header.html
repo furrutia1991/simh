@@ -3,9 +3,9 @@
 			<img class="pull-right" src="" alt="logo">
 		</figure>
 		<div class="col-lg-1 col-xs-2">
-			<i class="el-icon-bell"></i>
+			<i class="el el-bell el-2x"></i>
 			{% if notificacion %}
-				<i class="el-icon-asterisk"></i>	
+				<i class="el el-asterisk"></i>	
 			{% endif %}
 			
 		</div>
@@ -13,7 +13,7 @@
 		<div class="profile col-lg-10 col-xs-7 ">
 			<div class="photo pull-right">
 				<img src="{{user.photo}}" class="round" alt="avatar">
-				<label class="username">{{user.name}}</label>
+				<label class="username">{{user.name}}<i class="el el-caret-down"></i></label>
 			</div>
 			
 		</div>
