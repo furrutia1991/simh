@@ -14,6 +14,9 @@ header
 }
 .categories
 {
+   margin: 1em;
+   border: 1px solid #ddd;
+   background: #fdfdfd; 
    
 }
 .default-margin
