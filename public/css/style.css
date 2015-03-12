@@ -107,13 +107,17 @@ header
 {
    
    color: white;
-   padding: 5em;
+   margin: 0 auto;
    
 }
 
 .social-login div
 {
-   margin-bottom: 2em;
+   margin: 1em auto;
+   position: relative;
+   top: 50%;
+   left: 20%;
+
 }
 
 .username
@@ -146,6 +150,25 @@ header
    {
       font-size: 1em;
       padding:  .5em 1em;
+   }
+   .social-login
+   {
+      background: rgba(0,0,0,.7);
+      padding: 1em;
+      position: absolute;
+      top: 5%;
+      left: 10%;
+      width: 80%;
+   }
+   .social-login div
+   {
+      margin: 0.5em auto;
+
+
+   }
+   .el-facebook, .el-twitter
+   {
+      font-size: 1em;
    }
    
    .xs-center
