@@ -10,6 +10,13 @@ header
    padding: 2em 0;
 }
 
+
+.arrow:hover
+{
+   color: black;
+
+}
+
 .borde
 {
    
@@ -18,6 +25,7 @@ header
 .categories
 {
 }
+
 .content
 {
    position: relative;
@@ -68,7 +76,16 @@ header
    margin-bottom: 3em;
 }
 
-
+.header
+{
+   border-bottom: 2px solid white;
+   color: white;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 100;
+}
 .jumbotron
 {
 	overflow: hidden;
@@ -96,7 +113,7 @@ header
 }
 .social-login
 {
-   background: rgba(0,0,0,.7);
+   background: rgba(0,0,0,.3);
    padding: 5em;
    position: absolute;
    top: 30%;
