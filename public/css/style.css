@@ -1,6 +1,7 @@
 body
 {
-   
+   position: relative;  
+   overflow: hidden;
 }
 
 header
@@ -8,16 +9,19 @@ header
    background: #00BCD4;
    padding: 2em 0;
 }
-#facebook
-{
-   margin-bottom: 1em;
-}
+
 .borde
 {
-   border: 2px solid red;
+   
 }
+
 .categories
 {
+}
+.content
+{
+   position: relative;
+   
 }
 
 .default-margin
@@ -29,7 +33,15 @@ header
    font-size: 2em;
    color:white;
 }
-
+.el-facebook
+{
+   color: #314A7E;
+   background: white;  
+}
+.el-twitter
+{
+   color: #339DC3;
+}
 .el-asterisk
 {
    color: red;
@@ -56,16 +68,6 @@ header
    margin-bottom: 3em;
 }
 
-.full-center {
-   width: 600px;
-   height: 600px;
-   position: absolute;
-   overflow: hidden;
-   left: 50%;
-   top: 70%; 
-   margin-left: -300px;
-   margin-top: -300px;
-}
 
 .jumbotron
 {
@@ -87,15 +89,56 @@ header
    
 }
 
+
 .round
 {
    border-radius: 50%;
 }
+.social-login
+{
+   background: rgba(0,0,0,.7);
+   padding: 5em;
+   position: absolute;
+   top: 30%;
+   left: 35%;
+   width: 30%;
+}
+.social-login a
+{
+   
+   color: white;
+   padding: 5em;
+   
+}
+
+.social-login div
+{
+   margin-bottom: 2em;
+}
+
 .username
 {
    color:white;
 }
 
+.carousel 
+{
+
+  /*max-width:1200px; THIS IS OPTIONAL (ANY SIZE YOU LIKE)*/
+  margin:0 auto 60px;
+}
+
+.carousel .item 
+{
+    width:100%;
+    height:auto;
+}
+.carousel-inner > .item > img 
+{ 
+
+  min-width:100%;
+  height:auto;
+}
 @media screen and (max-width: 480px)
 {
 
@@ -112,7 +155,3 @@ header
 
 }
 
-@media screen and (min-width: 1024px)
-{
-
-}

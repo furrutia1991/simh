@@ -10,6 +10,7 @@ var express = require('express'),
 
 var server = express();
 
+/*modules*/
 require('./passport')(passport);
 require('./app/models');
 
@@ -29,7 +30,6 @@ server.use(passport.session());
 
 
 /*controllers*/
-
 require('./app/controllers/homecontroller')(server, passport, mongoose);
 
 
