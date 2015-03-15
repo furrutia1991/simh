@@ -22,6 +22,7 @@ module.exports = function  (passport) {
 				provider_id: profile.id,
 				provider: profile.provider,
 				name: profile.displayName,
+				username: profile.username,
 				photo: profile.photos[0].value
 			});
 			user.save(function (err) {

@@ -31,6 +31,7 @@ server.use(passport.session());
 
 /*controllers*/
 require('./app/controllers/homecontroller')(server, passport, mongoose);
+require('./app/controllers/actualstatecontroller')(server);
 
 
 

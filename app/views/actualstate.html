@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Estado actual
+{% endblock title %}
+
+{% block body %}
+	<div class="state-container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 actual-photo">
+				<img src="images/house.jpg" alt="estado actual" style="width:1000px; height:500px " >
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-5 col-lg-offset-1">
+				<section class="house-temperature">
+					<h2 class="title">Temperatura de la chanteeee</h2>
+					<div class="value">
+						<h2>27°C</h2>
+					</div>
+				</section>
+			</div>
+			<div class="col-lg-5">
+				<section class="house-temperature">
+					<h2 class="title">Temperatura de yajuuuuu</h2>
+					<div class="value">
+						<h2>25°C</h2>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-5 col-lg-offset-1">
+				<section class="humidity">
+					<h2>Humedad de la chanteeee</h2>
+					<div class="value">
+						<h2>50%</h2>
+					</div>
+				</section>
+			</div>
+			<div class="col-lg-5">
+				<section class="activity">
+					<h2>Actividad de chanteeee</h2>
+					<div class="value">
+						<h2>25%</h2>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+{% endblock body %}

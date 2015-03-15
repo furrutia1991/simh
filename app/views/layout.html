@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}
+		texto por defecto	
+	{% endblock title %}
+	</title>
+	
+	{% block css %}
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/elusive-icons.min.css">
+		<link rel="stylesheet" href="css/style.css">	
+	{% endblock css %}
+</head>
+<body>
+	{% block header %}
+		<header class="row">
+				<figure class="logo col-lg-1 col-md-1 col-sm-2 col-xs-3" >
+					<a href="/home"><img class="pull-right" src="images/simh.png" alt="logo"></a>
+				</figure>
+				<div class="col-lg-1 col-xs-2 col-sm-1 col-md-1 pull-right notification">
+					<i class="el el-bell el-2x "></i>
+					{% if notificacion %}
+						<i class="el el-asterisk"></i>	
+					{% endif %}
+					
+				</div>
+				<div class="profile col-lg-2 col-xs-7 col-sm-8 col-md-10 pull-right">
+					<div class="photo pull-right">
+						<img src="{{user.photo}}" class="round" alt="avatar">
+						<label class="username">{{user.name}}</label>
+					</div>
+					
+				</div>
+		</header>
+	{% endblock header %}
+	{% block body %}
+		
+	{% endblock body %}
+
+	{% block js %}
+		
+	{% endblock js %}
+</body>
+</html>

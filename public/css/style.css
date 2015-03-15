@@ -1,29 +1,97 @@
-body
+.html,.body
 {
    position: relative;  
    overflow: hidden;
+   height:100%;
+   margin:0;
 }
 
 header
 {
    background: #00BCD4;
    padding: 2em 0;
+   margin-bottom: 2em;
 }
 
-
-.arrow:hover
+.actual-photo
 {
-   color: black;
-
+   margin-bottom: 2em;
 }
-
-.borde
+.alert-content
 {
    
+   
+   
+   box-shadow: 0 5px 10px gray;
+   padding: 1em;
+   position: relative;
+   overflow: hidden;
+}
+.carousel, .item, .active {
+height:100%;
+}
+.carousel-inner {
+height:100%;
+}
+.carousel {
+margin-bottom: 60px;
+}
+.carousel-caption {
+z-index: 10;
+}
+.carousel .item {
+background-color: #777;
+}
+.carousel .carousel-inner .bg {
+background-repeat:no-repeat;
+background-size:cover;
+}
+.carousel .carousel-inner .bg1 {
+background-image:url(../images/1.jpg);
+background-position: center top;
+}
+.carousel .carousel-inner .bg2 {
+background-image:url(../images/2.jpg);
+background-position: center center;
+}
+.carousel .carousel-inner .bg3 {
+background-image:url(../images/3.jpg);
+background-position: center bottom;
+}
+.carousel-control .arrow
+{
+   background: black;
+   border-radius: 50%;
+   font-size: 1em;
+
+
+   
+}
+/* --- Container configuration ---------------------------------------------------------- */
+.category-icon 
+{    
+   float: left;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 220px;
 }
 
-.categories
+/* --- Link configuration that contains the image and label ----------------------------- */
+.category-icon a 
 {
+
+    display: block;
+    position: relative;
+}
+
+.category-icon a img 
+{
+    height: 250px;
+    left: -20px;
+    position: relative;
+    top: -20px;
+    width: 260px;
 }
 
 .content
@@ -68,8 +136,11 @@ header
 }
 .description
 {
-   font-size: 1.5em;
+   font-size: 1.2em;
+   text-align: left;
+
 }
+
 
 .first-row
 {
@@ -78,13 +149,36 @@ header
 
 .header
 {
-   border-bottom: 2px solid white;
    color: white;
    position: absolute;
    top: 0;
    left: 0;
    width: 100%;
    z-index: 100;
+}
+.header-category
+{
+   background: #2c3350;
+   color: white;
+   font-size: 1.5em;
+   padding: .5em;
+   text-align: center;
+   margin: 0;
+
+}
+
+
+.house-temperature .title
+{
+   background: rgb(200,0,0);
+   color: white;
+   text-align: center;
+   margin: 0;
+}
+.house-temperature .value
+{
+   
+   padding: 5em;
 }
 .jumbotron
 {
@@ -98,14 +192,34 @@ header
    padding: 0.5em 1em;
    width: 100%;
 }
+.logo
+{
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
 
+}
+
+.logo img
+{
+   width: 100px;
+}
 .photo
 {
    display: inline-block;
    position: relative;
    
 }
-
+.profile, .notification
+{
+   display: table-cell;
+   vertical-align: middle;
+}
+.notification
+{
+   padding-top: .7em;
+}
 
 .round
 {
@@ -113,12 +227,12 @@ header
 }
 .social-login
 {
-   background: rgba(0,0,0,.3);
+   background: rgba(0,0,0,.7);
    padding: 5em;
    position: absolute;
    top: 30%;
-   left: 35%;
-   width: 30%;
+   left: 30%;
+   width: 40%;
 }
 .social-login a
 {
@@ -142,40 +256,108 @@ header
    color:white;
 }
 
-.carousel 
+
+@media screen and (max-width: 1440px)
 {
+   .category-icon 
+   {    
+      float: none;
+      margin: 0 auto;
+   }
+   .description
+   {
+      width: 100%;
+   }
 
-  /*max-width:1200px; THIS IS OPTIONAL (ANY SIZE YOU LIKE)*/
-  margin:0 auto 60px;
+
 }
 
-.carousel .item 
+@media screen and (max-width: 1024px)
 {
-    width:100%;
-    height:auto;
-}
-.carousel-inner > .item > img 
-{ 
+   .carousel-inner > .item > img 
+   { 
 
-  min-width:100%;
-  height:auto;
+     min-width:100%;
+     height:500px;
+   }
+
+   .social-login
+   {
+      padding: 1em;
+      top: 30%;
+      left: 25%;
+      width: 50%;
+   }
 }
+
+@media screen and (max-width: 768px)
+{
+   .social-login
+   {
+      left: 15%;
+      width: 70%;
+   }
+   .carousel-control .arrow
+   {
+      padding: .3em;   
+   }
+
+
+}
+
+@media screen and (max-width: 600px)
+{
+   .categories
+   {
+      margin-left: 5%;
+      width: 90%;
+   }
+
+}
+
+
 @media screen and (max-width: 480px)
 {
 
+   .carousel-inner > .item > img 
+   { 
+
+     min-width:100%;
+     height:300px;
+   }
+   .carousel-control .arrow
+   {
+      font-size: .7em;
+      padding: .5em;   
+      margin-top: 10em;
+   }
+   .logo img
+   {
+      margin-top: 1em;
+      width: 80px;
+   }
    .logout
    {
       font-size: 1em;
       padding:  .5em 1em;
    }
+   .profile
+   {
+      float: none;
+      
+   }
+   .profile .photo
+   {
+      
+      margin-right: 3em;
+   }
+
+
    .social-login
    {
-      background: rgba(0,0,0,.7);
-      padding: 1em;
-      position: absolute;
-      top: 5%;
-      left: 10%;
-      width: 80%;
+      font-size: 1.3em;
+      left: 0%;
+      width: 100%;
    }
    .social-login div
    {
