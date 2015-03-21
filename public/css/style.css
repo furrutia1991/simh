@@ -15,6 +15,8 @@ header
    background: #00BCD4;
    padding: 2em 0;
    margin-bottom: 2em;
+   overflow: hidden;
+   position: relative;
 }
 
 .actual-photo
@@ -365,7 +367,19 @@ background-position: center bottom;
        left: -90px;
        width: 95%;
    }
+   .logo
+   {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 30px;
 
+   }
+
+   .logo img
+   {
+      width: 90px;
+   }
    .social-login
    {
       padding: 1em;
@@ -397,6 +411,17 @@ background-position: center bottom;
       top: -110px;
       left: -80px;
       width: 80%;
+  }
+
+  .logo
+  {
+     left: -10px;
+
+  }
+
+  .logo img
+  {
+     width: 90px;
   }  
    .social-login
    {
@@ -455,9 +480,12 @@ background-position: center bottom;
       margin-left: 5%;
       width: 90%;
    }
+   .logo
+   {
+      left: 10px;
+   }
    .logo img
    {
-      margin-top: 1em;
       width: 80px;
    }
    .logout
