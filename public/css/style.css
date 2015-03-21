@@ -13,10 +13,8 @@ body
 header
 {
    background: #00BCD4;
-   overflow: hidden;
-   position: relative;
-   padding: 2em;
-   
+   padding: 2em 0;
+   margin-bottom: 2em;
 }
 
 .actual-photo
@@ -65,12 +63,7 @@ header
 }
 .alert-content
 {
-<<<<<<< HEAD
-   box-shadow: 0 5px 10px gray;
-   padding: 1em;
-=======
    box-shadow: 0 2px 5px gray;
->>>>>>> templates-design
    position: relative;
    overflow: hidden;
    padding: 0;
@@ -78,10 +71,6 @@ header
 .borde
 {   
   border: 1px solid red;
-}
-.borde
-{
-   border: 1px solid red;
 }
 .carousel, .item, .active {
 height:100%;
@@ -122,17 +111,7 @@ background-position: center bottom;
 
    
 }
-<<<<<<< HEAD
-.categories
-{
-   margin: 0;
-   position: relative;
-   
 
-}
-=======
-
->>>>>>> templates-design
 /* --- Container configuration ---------------------------------------------------------- */
 .category-icon 
 {    
@@ -164,7 +143,7 @@ background-position: center bottom;
 .content
 {
    position: relative;
-   margin: 0;
+   
 }
 
 .default-margin
@@ -368,11 +347,7 @@ background-position: center bottom;
    {
       width: 100%;
    }
-   .logo img
-   {  
-      margin-top: 1em;
-      width: 50px;
-   }
+
 
 }
 
@@ -397,11 +372,6 @@ background-position: center bottom;
       top: 30%;
       left: 25%;
       width: 50%;
-   }
-   .logo img
-   {  
-      margin-top: 1em;
-      width: 80px;
    }
 }
 
@@ -437,15 +407,7 @@ background-position: center bottom;
    {
       padding: .3em;   
    }
-<<<<<<< HEAD
-   .logo img
-   {  
-      margin-top: 1em;
-      width: 80px;
-   }
-=======
    
->>>>>>> templates-design
 
 }
 
@@ -456,13 +418,6 @@ background-position: center bottom;
       margin-left: 5%;
       width: 90%;
    }
-<<<<<<< HEAD
-   .logo img
-   {  
-      margin-top: 1em;
-      width: 80px;
-   }
-=======
    .category-icon a img 
    {    
        top: -130px;
@@ -470,7 +425,6 @@ background-position: center bottom;
        width: 95%;
    }
 
->>>>>>> templates-design
 }
 
 
