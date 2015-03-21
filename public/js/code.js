@@ -1,10 +1,10 @@
 $(document).ready(function() {
-    $('.category-icon').mouseenter(function(e) {
-        $(this).children('a').children('img').animate({ height: '200', left: '0', top: '0', width: '220'}, 100);
+	$('.actual-photo')
+	.mouseover(function(event) {
+		$('.take-picture').css('display', 'block');;
+	})
+	.mouseout(function(event) {
+		$('.take-picture').css('display', 'none');		
+	});
 
-        
-    }).mouseleave(function(e) {
-        $(this).children('a').children('img').animate({ height: '250', left: '-20', top: '-20', width: '260'}, 100);
-        
-    });
 });

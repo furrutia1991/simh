@@ -5,6 +5,10 @@
    height:100%;
    margin:0;
 }
+body
+{
+
+}
 
 header
 {
@@ -18,13 +22,62 @@ header
 .actual-photo
 {
    margin-bottom: 2em;
+  padding: 0;
+  position: relative;;
+}
+.actual-photo .photo
+{
+  margin: 0;
+  padding: 0;
+}
+.actual-photo .photo img
+{
+  height: 500px;
+  width: 100%;
+}
+.take-picture:hover
+{
+  cursor: pointer;
+}
+.actual-photo .photo:hover
+{
+  cursor: pointer;
+}
+
+.take-picture 
+{
+  background: rgba(0,0,0,.7);
+  display: none;  
+  height: 500px;
+  left: 0;
+  position: absolute;
+  transition: all 1s ease;
+  top:0;
+  width: 99.2%;
+  
+}
+.actual-photo a
+{
+  color: #B54051;
+  position: absolute;
+  top: 45%;
+  left: 47%;  
 }
 .alert-content
 {
+<<<<<<< HEAD
    box-shadow: 0 5px 10px gray;
    padding: 1em;
+=======
+   box-shadow: 0 2px 5px gray;
+>>>>>>> templates-design
    position: relative;
    overflow: hidden;
+   padding: 0;
+}
+.borde
+{   
+  border: 1px solid red;
 }
 .borde
 {
@@ -63,13 +116,13 @@ background-position: center bottom;
 }
 .carousel-control .arrow
 {
-   background: black;
-   border-radius: 50%;
+   background: black;   
    font-size: 1em;
 
 
    
 }
+<<<<<<< HEAD
 .categories
 {
    margin: 0;
@@ -77,31 +130,35 @@ background-position: center bottom;
    
 
 }
+=======
+
+>>>>>>> templates-design
 /* --- Container configuration ---------------------------------------------------------- */
 .category-icon 
 {    
    float: left;
-    height: 200px;
+   height: 320px;
     overflow: hidden;
     position: relative;
-    width: 220px;
-}
-
-/* --- Link configuration that contains the image and label ----------------------------- */
-.category-icon a 
-{
-
-    display: block;
-    position: relative;
+    width: 520px;
 }
 
 .category-icon a img 
+{    
+    position: relative;   
+    top: -130px;
+    left: -30px;
+    -webkit-transition: all .1s ease;
+         -moz-transition: all .1s ease;
+           -o-transition: all .1s ease;
+          -ms-transition: all .1s ease;
+              transition: all .1s ease;
+    width: 105%;
+}
+
+.category-icon a img:hover
 {
-    height: 250px;
-    left: -20px;
-    position: relative;
-    top: -20px;
-    width: 260px;
+   transform: scale(.9);
 }
 
 .content
@@ -148,7 +205,7 @@ background-position: center bottom;
 {
    font-size: 1.2em;
    text-align: left;
-
+   padding: .5em;
 }
 
 
@@ -176,23 +233,45 @@ background-position: center bottom;
    margin: 0;
 
 }
-
-
-.house-temperature .title
+.house-temperature
 {
-   background: rgb(200,0,0);
+  position: relative;
+  overflow: hidden;
+}
+
+.house-temperature .title, .activity .title, .humidity .title
+{
+   background: #351940;
    color: white;
    text-align: center;
+   position: relative;
+   overflow: hidden;
    margin: 0;
 }
-.house-temperature .value
+.house-temperature .value, .activity .value, .humidity .value
 {
-   
+  
+  border: 1px solid #ccc;
    padding: 5em;
+   position: relative;
+   overflow: hidden;
+   text-align: right;
+}
+.house-temperature .value h2, .activity .value h2, .humidity .value h2
+{
+  
+  font-size: 3em;
+}
+.temperature-icon, .activity-icon, .humidity-icon
+{
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 40%;
 }
 .jumbotron
 {
-	overflow: hidden;
+   overflow: hidden;
 }
 
 .logout
@@ -232,8 +311,8 @@ background-position: center bottom;
 }
 
 .round
-{
-   border-radius: 50%;
+{   
+  border-radius: 50%;
 }
 .social-login
 {
@@ -260,6 +339,10 @@ background-position: center bottom;
    left: 20%;
 
 }
+.state-row
+{
+  margin-bottom: 3em;
+}
 
 .username
 {
@@ -274,6 +357,13 @@ background-position: center bottom;
       float: none;
       margin: 0 auto;
    }
+   .category-icon a img 
+   {    
+       position: relative;   
+       top: -130px;
+       left: -50px;
+       width: 105%;
+   }
    .description
    {
       width: 100%;
@@ -286,13 +376,19 @@ background-position: center bottom;
 
 }
 
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 1280px)
 {
    .carousel-inner > .item > img 
    { 
 
      min-width:100%;
      height:500px;
+   }
+   .category-icon a img 
+   {    
+       top: -110px;
+       left: -90px;
+       width: 95%;
    }
 
    .social-login
@@ -309,8 +405,29 @@ background-position: center bottom;
    }
 }
 
+@media screen and (max-width: 990px)
+{
+  .category-icon 
+  {        
+      width: 600px;
+  }
+  .category-icon a img 
+  {    
+      top: -120px;
+      left: -25px;
+      width: 85%;
+  }  
+}
+
 @media screen and (max-width: 768px)
 {
+  
+  .category-icon a img 
+  {    
+      top: -110px;
+      left: -80px;
+      width: 80%;
+  }  
    .social-login
    {
       left: 15%;
@@ -320,11 +437,15 @@ background-position: center bottom;
    {
       padding: .3em;   
    }
+<<<<<<< HEAD
    .logo img
    {  
       margin-top: 1em;
       width: 80px;
    }
+=======
+   
+>>>>>>> templates-design
 
 }
 
@@ -335,11 +456,21 @@ background-position: center bottom;
       margin-left: 5%;
       width: 90%;
    }
+<<<<<<< HEAD
    .logo img
    {  
       margin-top: 1em;
       width: 80px;
    }
+=======
+   .category-icon a img 
+   {    
+       top: -130px;
+       left: -28px;
+       width: 95%;
+   }
+
+>>>>>>> templates-design
 }
 
 
@@ -357,6 +488,18 @@ background-position: center bottom;
       font-size: .7em;
       padding: .5em;   
       margin-top: 10em;
+   }
+   .category-icon a img 
+   {    
+       position: relative;   
+       top: -120px;
+       left: -80px;
+       width: 90%;
+   }
+   .categories
+   {
+      margin-left: 5%;
+      width: 90%;
    }
    .logo img
    {
