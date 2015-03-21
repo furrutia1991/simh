@@ -20,6 +20,46 @@ header
 .actual-photo
 {
    margin-bottom: 2em;
+  padding: 0;
+  position: relative;;
+}
+.actual-photo .photo
+{
+  margin: 0;
+  padding: 0;
+}
+.actual-photo .photo img
+{
+  height: 500px;
+  width: 100%;
+}
+.take-picture:hover
+{
+  cursor: pointer;
+}
+.actual-photo .photo:hover
+{
+  cursor: pointer;
+}
+
+.take-picture 
+{
+  background: rgba(0,0,0,.7);
+  display: none;  
+  height: 500px;
+  left: 0;
+  position: absolute;
+  transition: all 1s ease;
+  top:0;
+  width: 99.2%;
+  
+}
+.actual-photo a
+{
+  color: #B54051;
+  position: absolute;
+  top: 45%;
+  left: 47%;  
 }
 .alert-content
 {
@@ -30,6 +70,7 @@ header
 }
 .borde
 {   
+  border: 1px solid red;
 }
 .carousel, .item, .active {
 height:100%;
@@ -171,19 +212,41 @@ background-position: center bottom;
    margin: 0;
 
 }
-
-
-.house-temperature .title
+.house-temperature
 {
-   background: rgb(200,0,0);
+  position: relative;
+  overflow: hidden;
+}
+
+.house-temperature .title, .activity .title, .humidity .title
+{
+   background: #351940;
    color: white;
    text-align: center;
+   position: relative;
+   overflow: hidden;
    margin: 0;
 }
-.house-temperature .value
+.house-temperature .value, .activity .value, .humidity .value
 {
-   
+  
+  border: 1px solid #ccc;
    padding: 5em;
+   position: relative;
+   overflow: hidden;
+   text-align: right;
+}
+.house-temperature .value h2, .activity .value h2, .humidity .value h2
+{
+  
+  font-size: 3em;
+}
+.temperature-icon, .activity-icon, .humidity-icon
+{
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 40%;
 }
 .jumbotron
 {
@@ -228,6 +291,7 @@ background-position: center bottom;
 
 .round
 {   
+  border-radius: 50%;
 }
 .social-login
 {
@@ -253,6 +317,10 @@ background-position: center bottom;
    top: 50%;
    left: 20%;
 
+}
+.state-row
+{
+  margin-bottom: 3em;
 }
 
 .username
