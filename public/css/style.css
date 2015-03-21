@@ -9,8 +9,10 @@
 header
 {
    background: #00BCD4;
-   padding: 2em 0;
-   margin-bottom: 2em;
+   overflow: hidden;
+   position: relative;
+   padding: 2em;
+   
 }
 
 .actual-photo
@@ -19,13 +21,14 @@ header
 }
 .alert-content
 {
-   
-   
-   
    box-shadow: 0 5px 10px gray;
    padding: 1em;
    position: relative;
    overflow: hidden;
+}
+.borde
+{
+   border: 1px solid red;
 }
 .carousel, .item, .active {
 height:100%;
@@ -67,6 +70,13 @@ background-position: center bottom;
 
    
 }
+.categories
+{
+   margin: 0;
+   position: relative;
+   top: -50px;
+
+}
 /* --- Container configuration ---------------------------------------------------------- */
 .category-icon 
 {    
@@ -97,7 +107,7 @@ background-position: center bottom;
 .content
 {
    position: relative;
-   
+   margin: 0;
 }
 
 .default-margin
@@ -271,7 +281,7 @@ background-position: center bottom;
    .logo img
    {  
       margin-top: 1em;
-      width: 80px;
+      width: 50px;
    }
 
 }
