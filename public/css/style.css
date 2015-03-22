@@ -186,7 +186,10 @@ background-position: center bottom;
    text-align: left;
    padding: .5em;
 }
-
+.filters
+{
+  padding-top: 1em;
+}
 
 .first-row
 {
@@ -287,6 +290,32 @@ background-position: center bottom;
 .notification
 {
    padding-top: .7em;
+}
+
+.record-list ul
+{
+  height: 700px;
+  list-style: none;
+  overflow-y: scroll;
+}
+.record-list ul li
+{
+  background: #f0f0f0;
+  margin: 1em;
+
+}
+.record-list ul li span
+{
+  
+  color: #555;
+  display: inline-block;
+  width: 80%;
+}
+.record-list ul li i
+{
+  color: white;
+  background: #EF3F47;
+  padding: 1em;
 }
 
 .round
