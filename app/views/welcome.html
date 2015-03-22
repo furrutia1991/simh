@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bienvenido falta un paso mas</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-modal">
+	
+		{% if firstTime %}
+			<!-- Modal -->
+			<div class="welcome-modal">
+			    <div class="modal-content">
+			      <div class="modal-body">
+			      			<form action="/save-user" method="POST">
+			      					<input type="email" name="email" class="form-control" placeholder="email" required>
+			      					<br>
+			      					<input type="password" name="password" class="form-control" placeholder="password" required>
+			      					<hr>
+			      				  <button type="submit" class="btn btn-primary pull-right">Guardar</button>	
+			      			</form>
+			        		
+			      </div>		      
+			    </div>
+			  </div>
+			  </form>
+			</div>	
+		
+	{% endif %}
+	
+</body>
+</html>

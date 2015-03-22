@@ -38,7 +38,6 @@ module.exports = function  (passport) {
 		callbackURL		: '/facebook/callback',
 		profileFields	: ['id', 'displayName', 'photos']	
 	}, function  (accessToken, refreshToken, profile, done) {
-		
 		db.User.findOne({provider_id: profile.id}, function  (err, user) {
 			
 			if (err) throw(err);
