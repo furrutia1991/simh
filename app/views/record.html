@@ -1,57 +1,105 @@
-{% extends "layout.html" %}
-
-{% block title %}
-	Historial
-{% endblock title %}
-
-{% block body %}
-	<div class="row record-container">
-		<div class="col-lg-2 col-lg-offset-1 filters">
-			<label for="">filtros:</label><input type="date" class="form-control">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Historial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" href="css/elusive-icons.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body">
+	<header class="row">
+			<figure class="logo col-lg-1 col-md-1 col-sm-2 col-xs-3" >
+				<a href="/home"><img class="pull-right" src="images/LOGO definitivoPeque.png" alt="logo"></a>
+			</figure>
+			<div class="col-lg-1 col-xs-2 col-sm-1 col-md-1 pull-right notification">
+				<i class="el el-bell el-2x "></i>
+				{% if notificacion %}
+					<i class="el el-asterisk"></i>	
+				{% endif %}
+				
+			</div>
+			<div class="profile col-lg-2 col-xs-7 col-sm-8 col-md-10 pull-right">
+				<div class="photo pull-right">
+					<img src="{{user.photo}}" class="round" alt="avatar">
+					<label class="username">{{user.name}}</label>
+				</div>
+				
+			</div>
+	</header>
+		<div class="row record-container">
+			<div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-3 filters">
+				<div class="filters-controls visible-lg visible-md">
+					<label for="">filtros:</label>
+					<p class="from-date-filter">
+						<label for="">Desde</label>
+						<input type="date" class="form-control">
+					</p>
+					<p class="to-date-filter">
+						<label for="">Hasta</label>
+						<input type="date" class="form-control">
+					</p>
+					<p class="alert-type-filter">
+						<label for="">Tipo de alerta</label>
+						<select name="" id="" class="form-control">
+							<option value="">Alerta 1</option>
+							<option value="">Alerta 2</option>
+							<option value="">Alerta 3</option>
+						</select>
+					</p>				
+				</div>
+				<div class="buttons-filter">
+					<a href="" class="btn btn-success center-block"><i class="el el-refresh"></i> Actualizar</a>
+					<a href="" class="btn btn-danger center-block"><i class="el el-trash"></i> Limpiar historial</a>
+				</div>
+			</div>
+			<div class="col-lg-8 record-list">
+				<ul>
+					<li>
+					<i class="el el-camera el-3x"></i>
+					<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
+					
+	 </li>
+					<li>
+					<i class="el el-warning-sign el-3x"></i>
+					<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
+					
+	 </li>
+					<li>
+					<i class="el el-eye-open el-3x"></i>
+					<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
+					
+	 </li>
+					<li>
+					<i class="el el-exclamation-sign el-3x"></i>
+					<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
+					
+	 </li>
+					<li>
+									<i class="el el-camera el-3x"></i>
+									<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
+									
+					 </li>
+									<li>
+									<i class="el el-warning-sign el-3x"></i>
+									<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
+									
+					 </li>
+									<li>
+									<i class="el el-eye-open el-3x"></i>
+									<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
+									
+					 </li>
+									<li>
+									<i class="el el-exclamation-sign el-3x"></i>
+									<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
+									
+					 </li>
+				</ul>
+			</div>
 		</div>
-		<div class="col-lg-8 record-list">
-			<ul>
-				<li>
-				<i class="el el-camera el-3x"></i>
-				<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
-				
- </li>
-				<li>
-				<i class="el el-warning-sign el-3x"></i>
-				<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
-				
- </li>
-				<li>
-				<i class="el el-eye-open el-3x"></i>
-				<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
-				
- </li>
-				<li>
-				<i class="el el-exclamation-sign el-3x"></i>
-				<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
-				
- </li>
-				<li>
-								<i class="el el-camera el-3x"></i>
-								<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
-								
-				 </li>
-								<li>
-								<i class="el el-warning-sign el-3x"></i>
-								<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
-								
-				 </li>
-								<li>
-								<i class="el el-eye-open el-3x"></i>
-								<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
-								
-				 </li>
-								<li>
-								<i class="el el-exclamation-sign el-3x"></i>
-								<span>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child</span>
-								
-				 </li>
-			</ul>
-		</div>
-	</div>
-{% endblock body %}
+
+</body>
+</html>

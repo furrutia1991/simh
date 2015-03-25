@@ -33,27 +33,11 @@ header
   height: 500px;
   width: 100%;
 }
-.take-picture:hover
-{
-  cursor: pointer;
-}
 .actual-photo .photo:hover
 {
   cursor: pointer;
 }
 
-.take-picture 
-{
-  background: rgba(0,0,0,.7);
-  display: none;  
-  height: 500px;
-  left: 0;
-  position: absolute;
-  transition: all 1s ease;
-  top:0;
-  width: 99.2%;
-  
-}
 .actual-photo a
 {
   color: #B54051;
@@ -68,9 +52,43 @@ header
    overflow: hidden;
    padding: 0;
 }
+.body-modal
+{
+  background: url(../images/hello.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
 .borde
 {   
-  border: 1px solid red;
+  border: 2px solid red;
+}
+.buttons-filter a
+{
+  color: white;
+  margin: 1em 0;
+  padding: .7em;
+  text-align: center;
+  text-decoration: none;
+
+}
+.buttons-filter a i
+{
+  transition: all 1s ease;
+}
+.buttons-filter a:hover > i
+{
+  transform: rotate(360deg);
+}
+.buttons-filter .btn-delete
+{
+  background: #EF3F47;
+  border-bottom: 4px solid #CA3F47;
+}
+.buttons-filter .btn-refresh
+{
+    background: #00AA55;
+  border-bottom: 4px solid #007755;
 }
 .carousel, .item, .active {
 height:100%;
@@ -83,6 +101,10 @@ margin-bottom: 60px;
 }
 .carousel-caption {
 z-index: 10;
+}
+.carousel-indicators li
+{
+  background: pink;
 }
 .carousel .item {
 background-color: #777;
@@ -103,12 +125,16 @@ background-position: center center;
 background-image:url(../images/3.jpg);
 background-position: center bottom;
 }
+.carousel .carousel-inner .bg4 {
+background-image:url(../images/4.jpg);
+background-position: center bottom;
+}
 .carousel-control .arrow
 {
    background: black;   
    font-size: 1em;
-
-
+   padding-top: 5px;
+   border-radius: 50%;
    
 }
 
@@ -150,6 +176,13 @@ background-position: center bottom;
 {
    margin-bottom: 2em;
 }
+.description
+{
+  background: white;
+   font-size: 1.2em;
+   text-align: left;
+   padding: .5em;
+}
 .el-bell
 {
    font-size: 2em;
@@ -180,15 +213,13 @@ background-position: center bottom;
 {
    padding-top: 5em;
 }
-.description
-{
-   font-size: 1.2em;
-   text-align: left;
-   padding: .5em;
-}
 .filters
 {
   padding-top: 1em;
+}
+.filters label
+{
+  color: gray;
 }
 
 .first-row
@@ -220,20 +251,19 @@ background-position: center bottom;
   position: relative;
   overflow: hidden;
 }
-
+.panel .panel-title
+{
+  background: #351940;
+}
 .house-temperature .title, .activity .title, .humidity .title
 {
-   background: #351940;
    color: white;
    text-align: center;
-   position: relative;
-   overflow: hidden;
+   padding: 0;
    margin: 0;
 }
 .house-temperature .value, .activity .value, .humidity .value
 {
-  
-  border: 1px solid #ccc;
    padding: 5em;
    position: relative;
    overflow: hidden;
@@ -274,8 +304,13 @@ background-position: center bottom;
 
 .logo img
 {
-   width: 100px;
+   width: 80px;
 }
+.notification
+{
+   padding-top: .7em;
+}
+
 .photo
 {
    display: inline-block;
@@ -287,11 +322,6 @@ background-position: center bottom;
    display: table-cell;
    vertical-align: middle;
 }
-.notification
-{
-   padding-top: .7em;
-}
-
 .record-list ul
 {
   height: 700px;
@@ -300,13 +330,12 @@ background-position: center bottom;
 }
 .record-list ul li
 {
-  background: #f0f0f0;
+  background: white;
   margin: 1em;
 
 }
 .record-list ul li span
-{
-  
+{  
   color: #555;
   display: inline-block;
   width: 80%;
@@ -332,11 +361,9 @@ background-position: center bottom;
    width: 40%;
 }
 .social-login a
-{
-   
+{  
    color: white;
-   margin: 0 auto;
-   
+   margin: 0 auto;  
 }
 
 .social-login div
@@ -345,22 +372,30 @@ background-position: center bottom;
    position: relative;
    top: 50%;
    left: 20%;
-
 }
 .state-row
 {
   margin-bottom: 3em;
 }
 
+.take-picture 
+{
+  background: rgba(0,0,0,.7);
+  display: none;  
+  height: 500px;
+  left: 0;
+  position: absolute;
+  transition: all 1s ease;
+  top:0;
+  width: 99.2%;
+}
+.take-picture:hover
+{
+  cursor: pointer;
+}
 .username
 {
    color:white;
-}
-.body-modal
-{
-  background: url(../images/hello.jpg) no-repeat center center fixed;
-  background-size: cover;
-  overflow: hidden;
 }
 .welcome-modal
 {
@@ -409,6 +444,7 @@ background-position: center bottom;
 
 @media screen and (max-width: 1280px)
 {
+
    .carousel-inner > .item > img 
    { 
 
@@ -432,7 +468,7 @@ background-position: center bottom;
 
    .logo img
    {
-      width: 90px;
+      width: 80px;
    }
    .social-login
    {
@@ -455,11 +491,25 @@ background-position: center bottom;
       left: -25px;
       width: 85%;
   }  
+  .record-list ul li i
+  {
+    color: white;
+    background: #EF3F47;
+    position: relative;
+    padding: .5em;
+
+  }
+
 }
 
 @media screen and (max-width: 768px)
 {
-  
+  .buttons-filter a 
+  {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+  }
   .category-icon a img 
   {    
       top: -110px;
@@ -476,7 +526,22 @@ background-position: center bottom;
   .logo img
   {
      width: 90px;
-  }  
+  } 
+  .record-list ul li
+  {
+    margin: 0em 1em .5em -2em;
+
+  }
+  .record-list ul li i
+  {
+    color: white;
+    background: #EF3F47;
+    position: relative;
+    padding: .5em;
+
+  }
+
+ 
    .social-login
    {
       left: 15%;
@@ -503,6 +568,21 @@ background-position: center bottom;
        left: -28px;
        width: 95%;
    }
+   .record-list ul li
+   {
+     margin: 0em 1em .5em -2em;
+
+   }
+   .record-list ul li i
+   {
+     color: white;
+     background: #EF3F47;
+     position: relative;
+     padding: .2em;
+     top: -.3em;
+   }
+
+
 
 }
 
@@ -510,9 +590,14 @@ background-position: center bottom;
 @media screen and (max-width: 480px)
 {
 
+    .buttons-filter a
+    {
+      top: -3em;
+      position: relative;
+      margin: 1em;
+    }
    .carousel-inner > .item > img 
    { 
-
      min-width:100%;
      height:300px;
    }
@@ -557,6 +642,24 @@ background-position: center bottom;
       
       margin-right: 3em;
    }
+    .record-list
+    {
+      position: relative;
+      top: -2em;
+    }
+    .record-list ul li
+    {
+      margin: 0em 1em .5em -2em;
+
+    }
+    .record-list ul li i
+    {
+      color: white;
+      background: #EF3F47;
+      position: relative;
+      padding: .2em;
+      top: -.3em;
+    }
 
 
    .social-login
