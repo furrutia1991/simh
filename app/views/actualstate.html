@@ -6,13 +6,17 @@
 
 {% block body %}
 	<div class="state-container">
+		
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1 actual-photo">
+				<div class="visible-xs visible-sm visible-md camera-floating-container">
+					<button href="/take-picture"><i class="el el-camera el-5x"></i></button>					
+				</div>
 				<figure class="photo" >
 					<img src="images/house.jpg" alt="estado actual" >	
 				</figure>
 				
-				<figure class="take-picture">
+				<figure class="take-picture visible-lg">
 
 					<a href="/take-picture">
 						<i class="el el-camera el-5x"></i>
@@ -20,8 +24,13 @@
 				</figure>
 			</div>
 		</div>
+		<div class="row last-update">
+			<div class="col-xs-12">
+				<h4>Ultima actualizacion: 17-12-2038 23:61pm</h4>
+			</div>	
+		</div>
 		<div class="row state-row">
-			<div class="col-lg-5 col-lg-offset-1">
+			<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1 col-md-6">
 				<section class="house-temperature panel">
 					<div class="panel-heading panel-title">
 						<h2 class="title">Temperatura de la casa</h2>
@@ -34,7 +43,7 @@
 				</section>
 			</div>
 
-			<div class="col-lg-5">
+			<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
 				<section class="house-temperature panel">
 					<div class="panel-heading panel-title">
 						<h2 class="title">Temperatura de internet</h2>
@@ -47,7 +56,7 @@
 			</div>
 		</div>
 		<div class="row state-row">
-			<div class="col-lg-5 col-lg-offset-1">
+			<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1">
 				<section class="humidity panel">
 					<div class="panel-heading panel-title">
 						<h2 class="title">Humedad de la casa</h2>
@@ -58,7 +67,7 @@
 					</div>
 				</section>
 			</div>
-			<div class="col-lg-5">
+			<div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
 				<section class="activity panel">
 					<div class="panel-heading panel-title">
 						<h2 class="title">Actividad de casa</h2>

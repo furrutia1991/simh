@@ -90,6 +90,23 @@ header
     background: #00AA55;
   border-bottom: 4px solid #007755;
 }
+.camera-floating-container
+{
+  top: 0;
+  right: 10px;
+  position: absolute;
+  z-index: 5;
+}
+.camera-floating-container button
+{
+  color: #B54051;
+  border: 0;
+  background: black;
+}
+.camera-floating-container button:active
+{
+  background: white;
+}
 .carousel, .item, .active {
 height:100%;
 }
@@ -226,7 +243,10 @@ background-position: center bottom;
 {
    margin-bottom: 3em;
 }
-
+.floating-camera-button
+{
+  z-index: 100;
+}
 .header
 {
    color: white;
@@ -250,6 +270,13 @@ background-position: center bottom;
 {
   position: relative;
   overflow: hidden;
+}
+.last-update h4
+{
+  color: #555;
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
 }
 .panel .panel-title
 {
@@ -277,9 +304,9 @@ background-position: center bottom;
 .temperature-icon, .activity-icon, .humidity-icon
 {
   position: absolute;
-  top: -15px;
+  top: 0;
   left: 0;
-  width: 40%;
+  height: 100%;
 }
 .jumbotron
 {
