@@ -189,6 +189,7 @@ background-position: center bottom;
    
 }
 
+
 .default-margin
 {
    margin-bottom: 2em;
@@ -420,6 +421,22 @@ background-position: center bottom;
 {
   cursor: pointer;
 }
+
+#toggle-button h2 {
+                  font-size: 18.7199993133545px;
+                  font-weight: bold;
+                  margin-bottom: 30px;
+                  margin-top: 50px;
+                }
+#toggle-button .togglebutton label {
+                  margin: 20px 10px;
+                  width: 200px;
+                }
+#toggle-button .togglebutton .toggle {
+                  float: right;
+                }
+
+
 .username
 {
    color:white;

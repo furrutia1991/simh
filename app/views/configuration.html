@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Configuracion
+{% endblock title %}
+{% block css %}
+	{% parent %}
+<link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="js/bootstrap-toggle.min.js"></script>
+	
+{% endblock css %}
+{% block body %}
+
+<div class="configuration-container">
+	<h2>Configuracion</h2> <br>
+	<div class="panel panel-primary">
+ 	<div class="panel-heading">
+ 		Todas
+ 	</div>
+ 	  <div class="panel-body">
+ 	   TRES libras de cadera no son cadera. El general 
+ 	  <input id="toggle-one" checked type="checkbox">
+<script>
+  $(function() {
+    $('#toggle-one').bootstrapToggle();
+  })
+</script>
+ 	  </div>
+	</div>
+
+	<div class="panel panel-success">
+ 	<div class="panel-heading">
+ 		Movimiento
+ 	</div>
+ 	  <div class="panel-body">
+ 	   TRES libras de cadera no son cadera. El general 
+ 	  </div>
+	</div>
+
+	<div class="panel panel-info">
+ 	<div class="panel-heading">
+ 		Ruido
+ 	</div>
+ 	  <div class="panel-body">
+ 	   TRES libras de cadera no son cadera. El general 
+ 	  </div>
+	</div>
+
+	<div class="panel panel-warning">
+ 	<div class="panel-heading">
+ 		Temperatura   
+
+ 	</div>
+ 	  <div class="panel-body">
+ 	   TRES libras de cadera no son cadera. El general 
+			<div class="togglebutton">
+                <label>
+                  Bluetooth
+                  <input type="checkbox">
+                </label>
+            </div>
+	</div>
+
+	<div class="panel panel-danger">
+ 	<div class="panel-heading">
+ 		Luces
+ 	</div>
+ 	  <div class="panel-body">
+ 	   TRES libras de cadera no son cadera. El general 
+ 	  </div>
+	</div>
+
+	<div class="panel panel-default">
+ 	<div class="panel-heading">
+ 		Humedad
+ 	</div>
+ 	  <div class="panel-body">
+ 	   TRES libras de cadera no son cadera. El general 
+ 	  </div>
+	</div>
+	
+</div>
+{% endblock body%}
