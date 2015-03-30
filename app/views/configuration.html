@@ -5,12 +5,12 @@
 {% endblock title %}
 {% block css %}
 	{% parent %}
-<link href="css/bootstrap-toggle.min.css" rel="stylesheet">
-<script src="js/bootstrap-toggle.min.js"></script>
 	
 {% endblock css %}
 {% block body %}
-
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
 <div class="configuration-container">
 	<h2>Configuracion</h2> <br>
 	<div class="panel panel-primary">
@@ -19,12 +19,7 @@
  	</div>
  	  <div class="panel-body">
  	   TRES libras de cadera no son cadera. El general 
- 	  <input id="toggle-one" checked type="checkbox">
-<script>
-  $(function() {
-    $('#toggle-one').bootstrapToggle();
-  })
-</script>
+ 	  <input type="checkbox" checked data-toggle="toggle">
  	  </div>
 	</div>
 

@@ -12,6 +12,10 @@ var homecontroller = function  (server, passport, formidable) {
 //		{res.render('configuracion.html');
 //	});
 
+	server.get('/controls', function (req, res) {
+		res.render('controls.html');
+	});
+
 	server.post('/save-user', function  (req, res) {
 		var form = new formidable.IncomingForm();
 		 
