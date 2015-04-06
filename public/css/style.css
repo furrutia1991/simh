@@ -11,7 +11,7 @@
 header
 {
    background: #00BCD4;
-   padding: 2em 0;
+   padding: 1em 0;
    margin-bottom: 2em;
    overflow: hidden;
    position: relative;
@@ -323,17 +323,18 @@ background-position: center bottom;
 }
 .logo
 {
+  border: 1px solid red;
    position: absolute;
    overflow: hidden;
    top: 0;
    left: 0;
-
 }
-
-.logo img
+.logo  img 
 {
-   width: 80px;
+  margin-left: 1em;
+  width: 5em;
 }
+
 .notification
 {
    padding-top: .7em;
@@ -350,11 +351,24 @@ background-position: center bottom;
    display: table-cell;
    vertical-align: middle;
 }
+.record-list
+{
+  
+  position:  relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
 .record-list ul
 {
-  height: 700px;
   list-style: none;
-  overflow-y: scroll;
+  overflow: auto;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: -15px;
 }
 .record-list ul li
 {
@@ -501,19 +515,6 @@ background-position: center bottom;
        left: -90px;
        width: 95%;
    }
-   .logo
-   {
-      position: absolute;
-      overflow: hidden;
-      top: 0;
-      left: 30px;
-
-   }
-
-   .logo img
-   {
-      width: 80px;
-   }
    .social-login
    {
       padding: 1em;
@@ -561,16 +562,6 @@ background-position: center bottom;
       width: 80%;
   }
 
-  .logo
-  {
-     left: -10px;
-
-  }
-
-  .logo img
-  {
-     width: 90px;
-  } 
   .record-list ul li
   {
     margin: 0em 1em .5em -2em;
@@ -611,6 +602,10 @@ background-position: center bottom;
        top: -130px;
        left: -28px;
        width: 95%;
+   }
+   .logo  img 
+   {
+     width: 4em;
    }
    .record-list ul li
    {
@@ -663,14 +658,7 @@ background-position: center bottom;
       margin-left: 5%;
       width: 90%;
    }
-   .logo
-   {
-      left: 10px;
-   }
-   .logo img
-   {
-      width: 80px;
-   }
+
    .logout
    {
       font-size: 1em;

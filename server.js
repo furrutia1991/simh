@@ -40,10 +40,9 @@ server.use(function(req, res, next) {
 require('./app/controllers/homecontroller')(server, passport, formidable);
 require('./app/controllers/apicontroller')(server, formidable);
 require('./app/controllers/recordcontroller')(server);
-
 require('./app/controllers/actualstatecontroller')(server);
 require('./app/controllers/configurationcontroller')(server);
-
+require('./app/controllers/controlscontroller')(server);
 
 
 

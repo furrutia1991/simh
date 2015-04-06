@@ -38,18 +38,26 @@ var homecontroller = function  (server, passport, formidable) {
 	});
 
 	server.get('/home',function (req, res) {
-		db.User.findById(req.user._id, function  (err, user) {
-			if (err) throw(err);
-			if (!(user.email && user.password))
-			{
-				return res.redirect('/welcome');
-				
-			}
-			else
-			{
-				return res.render('home.html', {user: req.user});
-			}
-		});
+		if (req.user) 
+		{
+			db.User.findById(req.user._id, function  (err, user) {
+				if (err) throw(err);
+				if (!(user.email && user.password))
+				{
+					return res.redirect('/welcome');
+					
+				}
+				else
+				{
+					return res.render('home.html', {user: req.user});
+				}
+			});
+		}
+		else
+		{
+			return res.render('home');
+		}
+		
 		
 	});
 
