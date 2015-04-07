@@ -12,6 +12,10 @@ var homecontroller = function  (server, passport, formidable) {
 //		{res.render('configuracion.html');
 //	});
 
+server.get('/alertas', function (req, res){
+	res.render('alerts.html');
+});
+
 	server.get('/controls', function (req, res) {
 		res.render('controls.html');
 	});
@@ -72,7 +76,7 @@ var homecontroller = function  (server, passport, formidable) {
 	}));
 	server.get('/facebook', passport.authenticate('facebook'));
 
-	server.get('/facebook/callback/', passport.authenticate('facebook',{	       
+	server.get('/facebook/callback', passport.authenticate('facebook',{	       
 	     successRedirect:"/home",
 	     failureRedirect:"/"
 	 }));

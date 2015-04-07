@@ -1,4 +1,5 @@
-var express = require('express'),
+var express = require('express.io'),
+    ws = require("nodejs-websocket"),
 	swig = require('swig'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
@@ -9,7 +10,57 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	formidable = require('formidable');
 
-var server = express();
+
+        
+    var server = express();
+    server.http().io();
+
+var clients = [];
+
+// Scream server example: "hi" -> "HI!!!" 
+var ws_server = ws.createServer(function (conn){
+    clients.push(conn);
+}).listen(8000);
+
+
+
+
+
+
+server.io.route('ready', function (socket){
+    socket.io.emit('hola', {data: 'hola'});
+    console.log('cliente conectado');
+});
+
+
+
+server.io.route('listo', function (socket){
+    console.log('cliente listo');
+    socket.io.emit('ok', {data: 'estoy listo'});
+
+});
+
+server.io.route('lights-on', function (socket){
+    clients.forEach(function(item){
+        item.sendText('lights-on');
+    })
+})
+
+server.io.route('lights-off', function (socket){
+    clients.forEach(function(item){
+        item.sendText('lights-off');
+    })
+})
+
+
+server.io.route('light-sound', function (socket){
+    clients.forEach(function(item){
+        item.sendText('light-sound');
+    })
+})
+
+
+
 
 /*modules*/
 require('./passport')(passport);
@@ -46,7 +97,7 @@ require('./app/controllers/controlscontroller')(server);
 
 
 
-server.listen(port, function  () {
-	console.log('escuchando en el puerto ' + port);
+server.listen(3000, function (){
+    console.log('servidor escuchando...')
 });
 

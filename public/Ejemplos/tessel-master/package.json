@@ -1,0 +1,31 @@
+{
+  "name": "tesseljam",
+  "version": "1.0.0",
+  "description": "A demo application to control a Tessel over wifi from the web, deployed on OPENSHIFT.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrianpomilio/tessel.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Tessel",
+    "demo",
+    "sockets"
+  ],
+  "author": "Adrian Pomilio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianpomilio/tessel/issues"
+  },
+  "homepage": "https://github.com/adrianpomilio/tessel",
+  "dependencies": {
+    "express.io": "^1.1.13",
+    "nodejs-websocket": "^1.0.0",
+    "servo-pca9685": "^0.1.3"
+  }
+}

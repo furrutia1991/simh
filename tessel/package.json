@@ -1,0 +1,15 @@
+{
+  "name": "tessel",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "erick",
+  "license": "ISC",
+  "dependencies": {
+    "ambient-attx4": "^0.2.5",
+    "nodejs-websocket": "^1.2.1",
+    "tessel": "~0.3.15"
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tessel Talk</title>
+  <style>
+    body{
+      background-image: url(https://s3.amazonaws.com/technicalmachine-assets/technical-io/tessel-red-usb.jpg);
+      background-repeat: no-repeat;
+    }
+    section {
+      width:280px;
+      margin:auto;
+      border:1px solid;
+      padding:1em;
+      background-color:white;
+      opacity: .6;
+
+    }
+    .button {
+      height:100px;
+      width: 240px;
+      background-color:blue;
+      color: white;
+      text-align: center;
+      margin: 5em auto;
+      border:1px solid navy;
+      border-radius:10px;
+      padding:1em;
+
+    }
+    .button:hover {
+      background-color:navy;
+    }
+  </style>
+</head>
+<body>
+<section>
+<h1>Tessel Talk</h1>
+<p id="message">The flatest designed application ever...</p>
+<div class="button" id="lights">Blink the lights</div>
+<div class="button" id="servos">Spin the servo</div>
+</section>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+"use strict";
+
+var io = io.connect()
+var msg = document.getElementById("message");
+
+document.addEventListener("click", function(evt){
+  console.log(evt)
+  if(evt.target.id === "lights"){
+      io.emit('lights')
+  }else if(evt.target.id === "servos"){
+      io.emit('servos')
+  }
+
+}, false);
+// Emit ready event.
+io.emit('ready')
+
+// Listen for the talk event.
+io.on('talk', function(data) {
+    msg.innerHTML = data.message;
+})
+
+</script>
+</body>
+</html>
