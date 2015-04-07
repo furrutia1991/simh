@@ -1,28 +1,57 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Controls</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" href="css/elusive-icons.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	{% include "header.html" %}
+	<h4>Controles</h4>
+	
+	<section class="contenedor">
 
-<script>
-	app.factory('socket', function ($rootScope) {
-	  var socket = io.connect();
-	  return {
-	    on: function (eventName, callback) {
-	      socket.on(eventName, function () {  
-	        var args = arguments;
-	        $rootScope.$apply(function () {
-	          callback.apply(socket, args);
-	        });
-	      });
-	    },
-	    emit: function (eventName, data, callback) {
-	      socket.emit(eventName, data, function () {
-	        var args = arguments;
-	        $rootScope.$apply(function () {
-	          if (callback) {
-	            callback.apply(socket, args);
-	          }
-	        });
-	      })
-	    }
-	  };
-	});
+		<section class="categories default-margin luces col-lg-5 bordes">
+			<h2 class="bordes">Luces</h2>
+			<div class="luz-on">
+				<span>Luces Interiores</span>
+				<a href="#"><img class="on pull-right" src="images/brightness.png" alt="imagen luces"></a>
+			</div>
+			<div class="luz-off">
+				<span>Luces Exteriores</span>
+				<a href="#"><img class="off pull-right"src="images/brightness.png" alt="imagen luces"></a>
+			</div>	
+			
+		</section>
 
-</script>
+		<section class="categories default-margin aire col-lg-5 bordes">
+			<h2>Aire</h2>
+			<div class="regular-aire">
+				<span>Regular Aire</span>
+				<a href="#"><img class="pull-right" src="images/weather.png" alt="imagen aire"></a>
+			</div>
+		</section>
+
+		<section class="categoriesas default-margin puertas col-lg-5 bordes">
+			<h2>Puertas</h2>
+			<div class="cerrar-puertas">
+				<span>Abrir Puertas</span>
+				<a href="#"><img class="pull-right" src="images/unlocked.png" alt="imagen puertas"></a>
+			</div>
+		</section>
+
+		<section class="categories default-margin foto col-lg-5 bordes">
+			<h2>Tomar Foto</h2>
+			<div class="tomar-foto">
+				<span>Tomar Foto</span>
+				<a href="#"><img class="pull-right" src="images/camera.png" alt="imagen fotos"></a>
+			</div>
+		</section>
+
+	</section>
+</body>
+</html>

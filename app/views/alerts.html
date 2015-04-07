@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Alerts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" href="css/elusive-icons.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	{% include "header.html" %}
+	
+	<div class=" encabezado">
+		<h2>Alertas</h2>
+		<h3>Ultima conexion: 23:00</h3>
+	</div>
+
+	<div class="controles">
+		<a href="/controls"><img class="contenedor"src="images/settings.png" alt="imagen controles"></a>
+		<span class="letra">Ir a controles</span>
+	</div>
+	<div class="col-lg-10 alerts-list">
+		<ul>
+			<li>
+				<img src="images/speaker.png" alt="imagen ruido" class="perros"><span>Se detectó un ruido.</span>
+
+			</li>
+
+			<li>
+				<img src="images/speedometer.png" alt="imagen temperatura" class="perros"><span>Hubo un cambio de temperatura.</span>
+			</li>			
+
+			<li>
+				<img src="images/running.png" alt="imagen movimiento" class="perros"><span>Se detectó un movimiento.</span>
+				<img class="perro pull-right" src="images/house.jpg" alt="imagen alerta">
+				
+			</li>
+
+			<li>
+				<img src="images/brightness.png" alt="imagen luces" class="perros"><span>Luces encendidas.</span>
+			</li>			
+
+			<li>
+				<img src="images/door.png" alt="imagen puerta" class="perros"><span>Tocan la puerta</span>
+			</li>
+
+		</ul>
+
+	</div>
+	
+</body>
+</html>
+
